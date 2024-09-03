@@ -73,7 +73,8 @@ async function displayStaffTable() {
                 columnsFull.forEach((column) => {
                     const td = document.createElement("td");
                     if (column === 'Active') {
-                        td.innerHTML = `<img onclick="chahgeStaffStatus(event, ${row.id})" src="${!!row[column] ? '../images/checkbox-checked.svg' : '../images/checkbox-unchecked.svg'}" />`;
+                        console.log(row[column].data[0]);
+                        td.innerHTML = `<img onclick="chahgeStaffStatus(event, ${row.id})" src="${row[column].data[0] == '1' ? '../images/checkbox-checked.svg' : '../images/checkbox-unchecked.svg'}" />`;
                     } else {
                         td.textContent = row[column] || '';
                     }
@@ -83,7 +84,7 @@ async function displayStaffTable() {
                 columnsMain.forEach((column) => {
                     const td = document.createElement("td");
                     if (column === 'Active') {
-                        td.innerHTML = `<img onclick="chahgeStaffStatus(event, ${row.id})" src="${!!row[column] ? '../images/checkbox-checked.svg' : '../images/checkbox-unchecked.svg'}" />`;
+                        td.innerHTML = `<img onclick="chahgeStaffStatus(event, ${row.id})" src="${row[column].data[0] == '1' ? '../images/checkbox-checked.svg' : '../images/checkbox-unchecked.svg'}" />`;
                     } else {
                         td.textContent = row[column] || '';
                     }
