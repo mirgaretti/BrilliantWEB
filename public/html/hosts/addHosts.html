@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../styles/style.css" rel="stylesheet" />
+    <link rel="icon" href="../../images/hosts.svg" />
+    <title>Добавление хоста</title>
+</head>
+
+<body class="background-pic">
+
+    <div id="overlay" class="overlay"></div>
+
+    <div class="modal-content" id="confirmationModal">
+        <p id="confirmationText"></p>
+        <div class="modal-container">
+            <button class="cancel" button id="cancelButton">Отмена</button>
+            <button class="apply" button id="confirmButton"></button>
+        </div>
+    </div>
+
+    <div class="row">
+        <a href="/hostsPage"><img src="../../images/row.svg"></a>
+    </div>
+    <h1 class="page-title">Добавление хоста</h1>
+    <div class="edit-container">
+        <div class="line">
+            <p>Название</p>
+            <input class="addHosts" type="text" id="name" name="name" placeholder="Название" autocomplete="off"
+                maxlength="20">
+        </div>
+        <div class="line">
+            <p>Месторасположение</p>
+            <input class="addHosts" type="text" id="location" name="location" placeholder="Месторасположение"
+                autocomplete="off" maxlength="20">
+        </div>
+        <div class="line">
+            <p>IP-адрес</p>
+            <div>
+                <input class="addHosts" type="text" id="ip" name="ip" placeholder="111.222.333.444" autocomplete="off"
+                    maxlength="15">
+                <p class="notice" id="noticeIp">Такой IP-адрес уже существует!</p>
+            </div>
+        </div>
+        <div class="line">
+            <p>MAC-адрес</p>
+            <div>
+                <input class="addHosts" type="text" id="mac" name="mac" placeholder="MAC-адрес"
+                    oninput="updateCardfile(this.value)" autocomplete="off" maxlength="12">
+                <p class="notice" id="noticeMac">Такой MAC-адрес уже существует!</p>
+            </div>
+        </div>
+        <div class="line">
+            <p id="label">Название файла</p>
+            <input class="addHosts" type="text" id="cardfile" name="cardfile" placeholder="Название файла"
+                maxlength="16">
+        </div>
+    </div>
+    <div class="save-container">
+        <button onclick="checkConfirmationModal()">Сохранить</button>
+    </div>
+    <footer>
+        <p class="footer-title">Brilliant 3.0 WEB</p>
+    </footer>
+    <script src="../../scripts/hosts/addHosts.js"></script>
+    <script src="../../scripts/openConfirmModal.js"></script>
+    <script src="../../scripts/authCheck.js"></script>
+</body>
+
+</html>

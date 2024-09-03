@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../styles/style.css" rel="stylesheet" />
+        <link rel="icon" href="../images/menu.svg" />
+        <title>Меню</title>
+    </head>
+    <body class="background-pic">
+        <div class="row" onclick="logout()">
+            <img src="../../images/row.svg">
+        </div>
+        <div class="container">
+            <a href="/files"><button class="select-button"><p>Конфигурация RFID</p></button></a>
+            <a href="/journal"><button class="select-button"><p>Журнал вызовов медперсонала</p></button></a>
+            <a href="/location"><button class="select-button"><p>Местонахождение вызова</p></button></a>
+            <a href="/mqtt"><button class="select-button"><p>Проверка брокера</p></button></a>
+            <button onclick="logout()" class="exit-button"><p>Выход</p></button>
+        </div>
+        <footer>
+            <p class="footer-title">Brilliant 3.0 WEB</p>
+        </footer>
+    </body>
+    <script src="/scripts/logout.js"></script>
+    <script src="/scripts/authCheck.js"></script>
+</html>

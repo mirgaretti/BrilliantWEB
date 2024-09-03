@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../styles/style.css" rel="stylesheet" />
+        <link rel="icon" href="../../images/staff.svg" />
+        <title>Редактирование карты</title>
+    </head>
+    <body class="background-pic">
+
+        <div id="overlay" class="overlay"></div>
+
+        <div class="modal-content" id="confirmationModal">
+            <p id="confirmationText"></p>
+            <div class="modal-container"> 
+                <button class="cancel" button id="cancelButton">Отмена</button>
+                <button class="apply" button id="confirmButton"></button>
+            </div>
+        </div>
+        <div class="row">
+            <a href="/staffPage"><img src="../../images/row.svg"></a>
+        </div>
+        <h1 class="page-title">Редактирование карты</h1>
+        <div id="staff-container" class="edit-container staff"></div>
+        <div class="save-container">
+            <button class="input-submit" onclick="checkConfirmationModal()">Сохранить</button>
+        </div>
+        <footer>
+            <p class="footer-title">Brilliant 3.0 WEB</p>
+        </footer>
+        <script src="/scripts/displayEditValues.js"></script>
+        <script src="/scripts/staff/editStaff.js"></script>
+        <script src="/scripts/openConfirmModal.js"></script>
+        <script src="/scripts/authCheck.js"></script>
+    </body> 
+</html>

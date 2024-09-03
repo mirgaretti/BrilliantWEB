@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <link href="../styles/style.css" rel="stylesheet" />
+        <link rel="icon" href="../../images/journal.svg" />
+        <title>Журнал вызова сообщений</title>
+    </head>
+    <body class="background-pic">
+        <div id="overlay" class="overlay"></div>
+        <div class="modal-content" id="confirmationModal">
+            <p id="confirmationText">Введите текст подтверждения</p>
+            <textarea id="valueInput" placeholder="Введите значение">Сообщение подтверждено</textarea>
+            <div class="modal-container"> 
+                <button class="cancel" button id="cancelButton">Отмена</button>
+                <button class="apply" button id="confirmButton">Подтвердить</button>
+            </div>
+        </div>
+        <div class="modal-content" id="settingsModal">
+            <p>Количество записей</p>
+            <input type="number" min="1" max="100" step="1" id="settingsInput" placeholder="Введите значение" />
+            <div class="modal-container"> 
+                <button class="cancel" button id="settingsCancelButton">Отмена</button>
+                <button class="apply" button id="settingsConfirmButton">Подтвердить</button>
+            </div>
+        </div>
+        <div class="row-journal">
+            <a href="/menu"><img src="./images/row.svg"></a>
+        </div>
+        <div class="row-journal-settings" style="right: 3vw !important;">
+            <a href="/location"><img src="./images/location/location.svg"></a>
+        </div>
+        <div class="row-journal-settings" style="right: 6vw !important;" id="settings">
+            <img src="./images/location/settings.svg">
+        </div>
+        <div id="notifications" class="notification"></div>
+
+        <footer>
+            <p class="footer-title">Brilliant 3.0 WEB</p>
+        </footer>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/scripts/journal/displayNotificatoin.js"></script>
+    </body>
+</html>

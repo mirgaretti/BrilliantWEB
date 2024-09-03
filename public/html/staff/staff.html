@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../styles/style.css" rel="stylesheet" />
+        <link rel="icon" href="../../images/staff.svg" />
+        <title>Карты</title>
+    </head>
+    <body class="background-pic">
+        
+        <div id="overlay" class="overlay"></div>
+
+        <div class="notification-container" id="notification">
+            <p id="notificationText"></p>
+        </div>
+
+        <div class="modal-content" id="confirmationModal">
+            <p id="confirmationText"></p>
+            <div class="modal-container"> 
+                <button class="cancel" button id="cancelButton">Отмена</button>
+                <button class="apply" button id="confirmButton"></button>
+            </div>
+        </div>
+        <div class="row">
+            <a href="/menu"><img src="./images/row.svg"></a>
+        </div>
+
+        <div class="menu-container">
+            <a href="/files"><button>Файлы</button></a>
+            <a href="/hostsPage"><button>Хосты</button></a>
+            <a href="/staffPage"><button class="active">Карты</button></a>
+            <!-- <a href="/mqtt"><button>Брокер</button></a> -->
+        </div>
+
+        <div id="tableContainer" class="table-container" style="max-height: 329px;">
+            <table class="table" id="myTable">
+                <thead>
+                    <tr id="tableHeaders"></tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <footer>
+            <div class="import-container">
+                <input type="text" id="filename" placeholder="Имя файла">
+                <label>.xml</label>
+                <button id="savePath">Сохранить</button>
+            </div>
+            <p class="footer-title">Brilliant 3.0 WEB</p>
+        </footer>
+        <script src="/scripts/displayNotification.js"></script>
+        <script src="/scripts/sortTable.js"></script>
+        <script src="/scripts/authCheck.js"></script>
+        <script src="/scripts/staff/displayStaff.js"></script>
+        <script src="/scripts/staff/exportXml.js"></script>
+        <script src="/scripts/openConfirmModal.js"></script>
+    </body>
+</html>

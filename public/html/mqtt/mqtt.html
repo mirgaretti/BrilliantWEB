@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../styles/style.css" rel="stylesheet" />
+        <link rel="icon" href="../../images/mqtt.svg" />
+        <title>Брокер</title>
+    </head>
+    <body class="background-pic">
+            <div class="row">
+                <a href="/menu"><img src="./images/row.svg"></a>
+            </div>
+            <div class="mqtt-container">
+                <div class="path">
+                    <label>Адрес</label>
+                    <input type="text" id="host" placeholder="Адрес" readonly>
+                </div>
+                <div class="path">
+                    <label>Порт</label>
+                    <input type="text" id="port" placeholder="Порт" readonly>
+                </div>  
+                <div class="path">
+                    <label>Пользователь</label>
+                    <input type="text" id="username" placeholder="Пользователь" readonly>
+                </div>  
+                <div class="path">
+                    <label>Пароль</label>
+                    <input type="text" id="password" placeholder="Пароль" readonly>
+                </div>  
+                <div class="path">
+                    <p id="status"></p>
+                </div>  
+            </div>
+            <footer>
+                <div class="save-container">
+                    <button class="files" id="check">Проверить подключение</button>
+                </div>
+                <p class="footer-title">Brilliant 3.0 WEB</p>
+            </footer>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/scripts/mqtt/mqtt.js"></script>
+        <script src="/scripts/authCheck.js"></script>
+    </body>
+</html>

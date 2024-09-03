@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../styles/style.css" rel="stylesheet" />
+        <link rel="icon" href="../../images/hosts.svg" />
+        <title>Хосты</title>
+    </head>
+    <body class="background-pic">
+
+        <div id="overlay" class="overlay"></div>
+
+        <div class="notification-container" id="notification">
+            <p id="notificationText"></p>
+        </div>
+        <div class="modal-content" id="confirmationModal">
+            <p id="confirmationText"></p>
+            <div class="modal-container"> 
+                <button class="cancel" button id="cancelButton">Отмена</button>
+                <button class="apply" button id="confirmButton"></button>
+            </div>
+        </div>
+        <div class="menu-container">
+            <a href="/files"><button>Файлы</button></a>
+            <a href="/hostsPage"><button class="active">Хосты</button></a>
+            <a href="/staffPage"><button>Карты</button></a>
+            <!-- <a href="/mqtt"><button>Брокер</button></a> -->
+        </div>
+
+        <div class="row">
+            <a href="/menu"><img src="./images/row.svg"></a>
+        </div>
+
+        <div id="tableContainer" class="table-container">
+            <table class="table" id="myTable">
+                <thead>
+                    <tr id="tableHeaders"></tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <footer>
+            <div class="import-container">
+                <input type="text" id="filename" placeholder="Имя файла">
+                <label>.xlsx</label>
+                <button id="savePath">Сохранить</button>
+            </div>
+            <p class="footer-title">Brilliant 3.0 WEB</p>
+        </footer>
+        <script src="/scripts/sortTable.js"></script>
+        <script src="/scripts/authCheck.js"></script>
+        <script src="/scripts/hosts/displayHosts.js"></script>
+        <script src="/scripts/hosts/import.js"></script>
+        <script src="/scripts/hosts/exportXlsx.js"></script>
+        <script src="/scripts/openConfirmModal.js"></script>
+        <script src="/scripts/displayNotification.js"></script>
+    </body>
+</html>

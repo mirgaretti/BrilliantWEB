@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../styles/style.css" rel="stylesheet" />
+        <link rel="icon" href="../../images/files.svg" />
+        <title>Файлы</title>
+    </head>
+    <body class="background-pic">
+            <div class="menu-container">
+                <a href="/files"><button class="active">Файлы</button></a>
+                <a href="/hostsPage"><button>Хосты</button></a>
+                <a href="/staffPage"><button>Карты</button></a>
+                <!-- <a href="/mqtt"><button>Брокер</button></a> -->
+            </div>
+            <div class="row">
+                <a href="/menu"><img src="./images/row.svg"></a>
+            </div>
+            <div class="file-container">
+                <div class="path">
+                    <label>Импорт</label>
+                    <input type="text" id="importPath" placeholder="Адрес импорта">
+                </div>
+                <div class="path">
+                    <label>Экспорт</label>
+                    <input type="text" id="exportPath" placeholder="Адрес экспорта">
+                    <img src="../images/checkbox-unchecked.svg" id="samePath">    
+                    <label style="width:100px; margin-right: 20px">Одинаковый путь</label>
+                </div>  
+            </div>
+            <footer>
+                <div class="save-container">
+                    <button class="files" id="savePath">Сохранить</button>
+                </div>
+                <p class="footer-title">Brilliant 3.0 WEB</p>
+            </footer>
+        <script src="/scripts/files/files.js"></script>
+        <script src="/scripts/authCheck.js"></script>
+    </body>
+</html>

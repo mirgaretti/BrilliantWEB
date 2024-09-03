@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../styles/style.css" rel="stylesheet" />
+        <link rel="icon" href="../../images/location.svg" />
+        <title>Локация</title>
+    </head>
+    <body class="background-pic">
+            <div class="row-journal">
+                <a href="/menu"><img src="./images/row.svg"></a>
+            </div>
+            <div class="row-journal-settings" style="right: 3vw !important;">
+                <a href="/journal"><img src="./images/location/journal.svg"></a>
+            </div>
+            <div class="location-container">
+                <img src="./images/location/map.png">
+
+                <img class="tplink" src="./images/location/tp.png" style="left: 235px; bottom: 130px">
+                <img class="tplink alarm" src="./images/location/alarm-tp.png" style="left: 235px; bottom: 130px" id="SOS/GW/002/007">
+                <p style="left: 235px; bottom: 110px">TP-002-007</p>
+                <img class="sos" src="./images/location/sos.gif" style="left: 260px; bottom: 175px" id="TP-002-007">
+
+                <img class="tplink" src="./images/location/tp.png" style="left: 382px; bottom: 130px">
+                <img class="tplink alarm" src="./images/location/alarm-tp.png" style="left: 382px; bottom: 130px" id="SOS/GW/002/008">
+                <p style="left: 382px; bottom: 110px">TP-002-008</p>
+                <img class="sos" src="./images/location/sos.gif" style="left: 408px; bottom: 175px" id="TP-002-008">
+
+                <img class="tplink" src="./images/location/signal.svg" style="z-index: 2; left: 80px; top: 270px; transform: translate(-50%, -50%); " id="signal">
+                <img class="tplink" src="./images/location/ptp.png" style="left: 60px; top: 230px; height: 75px;">
+                <img class="tplink alarm" src="./images/location/alarm-gw.png" style="left: 50px; top: 235px" id="SOS/GW/002/PTP/001">
+                <p style="left: 70px; top: 290px">PTP-001</p>
+                <img class="sos" src="./images/location/sos.gif" style="left: 50px; top: 235px" id="PTP-001">
+            </div>
+            <footer>
+                <p class="footer-title">Brilliant 3.0 WEB</p>
+            </footer>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="/scripts/authCheck.js"></script>
+        <script src="/scripts/journal/displayAlert.js"></script>
+    </body>
+</html>
