@@ -1,12 +1,10 @@
-const columnsMain = ['Active', 'Name', 'Admin', 'Role', 'Code', 'PublishTopicIn', 'PublishPayloadIn', 'PublishTopicOut', 'PublishPayloadOut'];
-const displayNameMain = [ '', 'Имя', 'Админ', 'Роль', 'Код', 'Publish Topic In', 'Publish Payload In', 'Publish Topic Out', 'Publish Payload Out'];
+const columnsMain = ['Active', 'Name', 'Role', 'Code', 'PublishTopicIn', 'PublishPayloadIn', 'PublishTopicOut', 'PublishPayloadOut'];
+const displayNameMain = [ '', 'Имя', 'Роль', 'Код', 'Топик In', 'Текст In', 'Топик Out', 'Текст Out'];
 
-const columnsFull = [ 'Active', 'Name', 'Admin', 'Role', 'Code', 'PublishTopicIn', 'PublishPayloadIn', 'PublishTopicOut', 'PublishPayloadOut',
-    'DoorNum', 'WebRelay', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun', 'TimeStart', 'TimeEnd', 'Floor', 'Cloud', 'DeviceName', 
-    'Addr', 'Tags', 'Frequency', 'DayStart', 'DayEnd', 'CardType', 'Schedule1', 'Schedule2', 'Schedule3', 'Schedule3', 'Schedule4', 'Schedule5'];    
-const displayNameFull = [ '', 'Имя', 'Админ', 'Роль', 'Код', 'Publish Topic In', 'Publish Payload In', 'Publish Topic Out', 'Publish Payload Out',
-    'DoorNum', 'WebRelay', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun', 'TimeStart', 'TimeEnd', 'Floor', 'Cloud', 'DeviceName', 
-    'Addr', 'Tags', 'Frequency', 'DayStart', 'DayEnd', 'CardType', 'Schedule1', 'Schedule2', 'Schedule3', 'Schedule3', 'Schedule4', 'Schedule5']; 
+const columnsFull = [ 'Active', 'Name', 'Role', 'Code', 'PublishTopicIn', 'PublishPayloadIn', 'PublishTopicOut', 'PublishPayloadOut',
+    'Floor', 'WebRelay', 'ScheduleRelay', 'CardType'];    
+const displayNameFull = [ '', 'Имя', 'Роль', 'Код', , 'Топик In', 'Текст In', 'Топик Out', 'Текст Out',
+    'Этаж', 'Веб-реле', 'Расписание', 'Тип карты']; 
 
 const url = new URL(window.location.href);
 const scope = url.searchParams.get('scope');
@@ -73,7 +71,6 @@ async function displayStaffTable() {
                 columnsFull.forEach((column) => {
                     const td = document.createElement("td");
                     if (column === 'Active') {
-                        console.log(row[column].data[0]);
                         td.innerHTML = `<img onclick="chahgeStaffStatus(event, ${row.id})" src="${row[column].data[0] == '1' ? '../images/checkbox-checked.svg' : '../images/checkbox-unchecked.svg'}" />`;
                     } else {
                         td.textContent = row[column] || '';

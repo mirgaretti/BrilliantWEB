@@ -15,6 +15,7 @@ async function ifFileExists(id) {
 }
 
 function openImportConfirmModal(id, fileexists) {
+    const overlay = document.getElementById('overlay');
     const modal = document.getElementById('confirmationModal');
     const confirmationTextElement = document.getElementById('confirmationText');
     const confirmButton = document.getElementById('confirmButton');
@@ -24,6 +25,7 @@ function openImportConfirmModal(id, fileexists) {
   
     if (fileexists) {
         modal.style.display = 'block';
+        overlay.style.display = 'block';
         confirmationTextElement.textContent = 'Файл существует!';
         confirmButton.textContent = 'Импорт';
         cancelButton.textContent = 'Отмена';
@@ -41,10 +43,12 @@ function openImportConfirmModal(id, fileexists) {
                 window.location.href = '/staffPage?scope=main&import=false';
             }
             modal.style.display = 'none';
+            overlay.style.display = 'none';
         };
     
         cancelButton.onclick = function() {
             modal.style.display = 'none';
+            overlay.style.display = 'none';
         };
     } else {
         modal.style.display = 'block';

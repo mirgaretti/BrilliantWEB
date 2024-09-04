@@ -1,15 +1,13 @@
 const id = window.location.href.split('?')[0].split('/').pop();
-const columnsFull = [ 'Active', 'Name', 'Admin', 'Role', 'Code', 'PublishTopicIn', 'PublishPayloadIn', 'PublishTopicOut', 'PublishPayloadOut',
-    'DoorNum', 'WebRelay', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun', 'TimeStart', 'TimeEnd', 'Floor', 'Cloud', 'DeviceName', 
-    'Addr', 'Tags', 'Frequency', 'DayStart', 'DayEnd', 'CardType', 'Schedule1', 'Schedule2', 'Schedule3', 'Schedule3', 'Schedule4', 'Schedule5'];    
-const displayNameFull = [ '', 'Имя', 'Админ', 'Роль', 'Код', 'Publish Topic In', 'Publish Payload In', 'Publish Topic Out', 'Publish Payload Out',
-    'DoorNum', 'WebRelay', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun', 'TimeStart', 'TimeEnd', 'Floor', 'Cloud', 'DeviceName', 
-    'Addr', 'Tags', 'Frequency', 'DayStart', 'DayEnd', 'CardType', 'Schedule1', 'Schedule2', 'Schedule3', 'Schedule3', 'Schedule4', 'Schedule5']; 
+const columnsFull = [ 'Active', 'Name', 'Role', 'Code', 'PublishTopicIn', 'PublishPayloadIn', 'PublishTopicOut', 'PublishPayloadOut',
+    'Floor', 'WebRelay', 'ScheduleRelay', 'CardType'];    
+const displayNameFull = [ '', 'Имя', 'Роль', 'Код', 'Publish Topic In', 'Publish Payload In', 'Publish Topic Out', 'Publish Payload Out',
+    'Этаж', 'Веб-реле', 'Расписание', 'Тип карты']; 
 
 displayEditValues(id, '/getStaffById/', columnsFull, displayNameFull, 'staff-container');
 
 //==============================================
-const requiresStaff = ['Name', 'Admin', 'Role', 'Code', 'PublishTopicIn', 'PublishPayloadIn', 'PublishTopicOut', 'PublishPayloadOut'];
+const requiresStaff = ['Name', 'Role', 'Code', 'PublishTopicIn', 'PublishPayloadIn', 'PublishTopicOut', 'PublishPayloadOut'];
 
 window.checkConfirmationModal = async () => {
     let isMatches = 1;
