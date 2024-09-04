@@ -20,7 +20,7 @@ function openImportConfirmModal(id, fileexists) {
     const confirmationTextElement = document.getElementById('confirmationText');
     const confirmButton = document.getElementById('confirmButton');
     const cancelButton = document.getElementById('cancelButton');
-    
+   
     console.log(fileexists);
   
     if (fileexists) {
