@@ -20,9 +20,9 @@ function openImportConfirmModal(id, fileexists) {
     const confirmationTextElement = document.getElementById('confirmationText');
     const confirmButton = document.getElementById('confirmButton');
     const cancelButton = document.getElementById('cancelButton');
-   
+    
     console.log(fileexists);
-  
+    
     if (fileexists) {
         modal.style.display = 'block';
         overlay.style.display = 'block';
@@ -45,22 +45,25 @@ function openImportConfirmModal(id, fileexists) {
             modal.style.display = 'none';
             overlay.style.display = 'none';
         };
-    
+        
         cancelButton.onclick = function() {
             modal.style.display = 'none';
             overlay.style.display = 'none';
         };
     } else {
         modal.style.display = 'block';
+        overlay.style.display = 'block';
         confirmationTextElement.textContent = 'Файл не найден!';
         confirmButton.textContent = 'Ок';
         cancelButton.textContent = 'Отмена';
-
+        
         confirmButton.onclick = function() {
+            overlay.style.display = 'none';
             modal.style.display = 'none';
         };
-    
+        
         cancelButton.onclick = function() {
+            overlay.style.display = 'none';
             modal.style.display = 'none';
         };
     }
