@@ -1,7 +1,7 @@
 const id = window.location.href.split('?')[0].split('/').pop();
-const columnsFull = [ 'Active', 'Name', 'Role', 'Code', 'PublishTopicIn', 'PublishPayloadIn', 'PublishTopicOut', 'PublishPayloadOut',
+const columnsFull = [ 'Name', 'Role', 'Code', 'PublishTopicIn', 'PublishPayloadIn', 'PublishTopicOut', 'PublishPayloadOut',
     'Floor', 'WebRelay', 'ScheduleRelay', 'CardType'];    
-const displayNameFull = [ '', 'Имя', 'Роль', 'Код', , 'Топик In', 'Текст In', 'Топик Out', 'Текст Out',
+const displayNameFull = [ 'Имя', 'Роль', 'Код', 'Топик In', 'Текст In', 'Топик Out', 'Текст Out',
     'Этаж', 'Веб-реле', 'Расписание', 'Тип карты']; 
 
 displayEditValues(id, '/getStaffById/', columnsFull, displayNameFull, 'staff-container');
